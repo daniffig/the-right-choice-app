@@ -2,11 +2,40 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Calculator from './components/Calculator'
+
+import LastUpdate from './components/LastUpdate/'
+import ExchangeRate from './components/ExchangeRate';
+
+import { Grid, Paper } from '@material-ui/core';
+
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <Grid container spacing={24} className="AppContainer">
+          <Grid item xs={12}>
+            <LastUpdate id="LastUpdate-last-update"></LastUpdate>
+          </Grid>
+          <Grid item xs={6}>
+            <ExchangeRate
+              id="ExchangeRate-USD-buying-rate"
+              className='buy'
+              label="Compra USD">
+            </ExchangeRate>
+          </Grid>
+          <Grid item xs={6}>
+            <ExchangeRate
+              id="ExchangeRate-USD-selling-rate"
+              label="Venta USD">
+            </ExchangeRate>
+          </Grid>
+          <Grid item xs={12}>
+            <Calculator />
+          </Grid>
+        </Grid>
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -19,7 +48,7 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
       </div>
     );
   }

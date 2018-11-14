@@ -22,6 +22,30 @@
   color: #61dafb;
 }
 
+
+.Widget-price {
+  color: white;
+}
+
+#LastUpdate-last-update {
+  grid-area: lastupdate;
+  text-align: left;
+}
+
+#ExchangeRate-USD-buying-rate {
+  background-color: green;
+  grid-area: usdbuyingrate;
+}
+
+#ExchangeRate-USD-selling-rate {
+  background-color: green;
+  grid-area: usdsellingrate;
+}
+
+#calculator {
+  grid-area: calculator;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
