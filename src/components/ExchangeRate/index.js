@@ -15,7 +15,7 @@ export default class ExchangeRate extends React.Component {
     return (
       <Card id={this.props.id} className={className}>
         <CardContent>
-          <Typography component="h2">$ 36.00</Typography>
+          <Typography component="h2" color='inherit'>$ 36.00</Typography>
           <Typography component="p">{this.props.label}</Typography>
         </CardContent>
       </Card>    

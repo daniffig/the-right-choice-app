@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Grid container spacing={24} className="AppContainer">
+        <Grid container spacing={24}>
           <Grid item xs={12}>
             <LastUpdate id="LastUpdate-last-update"></LastUpdate>
           </Grid>
