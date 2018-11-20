@@ -27,7 +27,7 @@
   color: white;
 }
 
-#LastUpdate-last-update {
+#ExchangeUpdater-last-update {
   grid-area: lastupdate;
   text-align: left;
 }

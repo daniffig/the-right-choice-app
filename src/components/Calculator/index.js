@@ -9,20 +9,24 @@ export default class Calculator extends React.Component {
     super();
 
     this.state = {
+      buyRate: null,
+      sellRate: null,
       initialCapital: null
     }
   }
 
+  changeExchangeRates(exchangeRates) {
+    // this.setState(exchange)
+  }
+
   changeInitialCapital(initialCapital) {
-    this.setState({initialCapital});
+    this.setState({ initialCapital });
   }
 
   render () {
     return (
       <div className="Calculator" id="calculator">
         <MoneyInput changeValue={this.changeInitialCapital.bind(this)}/>  
-        <MoneyInput />
-        <MoneyInput />
         <div>{this.state.initialCapital}</div>
         <div>{this.state.initialCapital * 10}</div>
       </div>

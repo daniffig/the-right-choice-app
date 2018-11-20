@@ -4,7 +4,7 @@ import './App.css';
 
 import Calculator from './components/Calculator'
 
-import LastUpdate from './components/LastUpdate/'
+import ExchangeUpdater from './components/ExchangeUpdater/'
 import ExchangeRate from './components/ExchangeRate';
 
 import { Grid, Paper } from '@material-ui/core';
@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App">
         <Grid container spacing={24}>
           <Grid item xs={12}>
-            <LastUpdate id="LastUpdate-last-update"></LastUpdate>
+            <ExchangeUpdater id="ExchangeUpdater-last-update"></ExchangeUpdater>
           </Grid>
           <Grid item xs={6}>
             <ExchangeRate

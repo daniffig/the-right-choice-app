@@ -6,8 +6,9 @@ import { TextField, InputAdornment } from "@material-ui/core";
 export default class MoneyInput extends React.Component {
   constructor() {
     super();
+
     this.state = {
-      value: null
+      value: 0
     }
   }
 
