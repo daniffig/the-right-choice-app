@@ -12,7 +12,9 @@ export default class ExchangeUpdater extends React.Component {
   }
 
   fetchUsdArsExchangeRate() {
-    console.log 'fede';
+    fetch('https://usd-ars-exchange-rate.herokuapp.com/usd-ars-exchange-rate.json').then(function (data) {
+      console.log(data);
+    });
   }
 
   componentDidMount() {
