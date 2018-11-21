@@ -6,31 +6,28 @@ export default class ExchangeUpdater extends React.Component {
   constructor() {
     super();
 
-    this.state = {
+    this.state = {      
       lastUpdate: null
     }
   }
 
   fetchUsdArsExchangeRate() {
-    fetch('https://usd-ars-exchange-rate.herokuapp.com/usd-ars-exchange-rate.json').then(function (data) {
-      console.log(data);
-    });
+    var component = this;
+
+    fetch('https://usd-ars-exchange-rate.herokuapp.com/usd-ars-exchange-rate.json')
+      .then((response) => response.json())
+      .then(function (data) {
+        component.setState({ lastUpdate: data.last_update });
+      });
   }
 
   componentDidMount() {
     this.fetchUsdArsExchangeRate();
-    // this.interval = setInterval(() => {
-    //   var elem = document.querySelector('iframe');
 
-    //   elem.src = elem.src;
-
-    //   var compra = document.querySelector('iframe .compra');
-
-    //   console.log(compra);
-
-    //   this.setState({ lastUpdate: (new Date()).toLocaleString('es-AR') });
-    // },
-    // 5000);
+    this.interval = setInterval(() => {
+      this.fetchUsdArsExchangeRate();
+    },
+    5000);
   }
 
   componentWillUnmount() {
