@@ -40,7 +40,6 @@ export default class ExchangeUpdater extends React.Component {
         <CardContent>
           <Typography component="p">Última actualización: <span>{this.state.lastUpdate}</span></Typography>
         </CardContent>
-        <iframe style={iframeStyles} src="http://www.dolarhoy.com"></iframe>
       </Card>
     );
   }
