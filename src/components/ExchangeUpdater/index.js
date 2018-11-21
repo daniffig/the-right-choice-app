@@ -11,19 +11,24 @@ export default class ExchangeUpdater extends React.Component {
     }
   }
 
+  fetchUsdArsExchangeRate() {
+    console.log 'fede';
+  }
+
   componentDidMount() {
-    this.interval = setInterval(() => {
-      var elem = document.querySelector('iframe');
+    this.fetchUsdArsExchangeRate();
+    // this.interval = setInterval(() => {
+    //   var elem = document.querySelector('iframe');
 
-      elem.src = elem.src;
+    //   elem.src = elem.src;
 
-      var compra = document.querySelector('iframe .compra');
+    //   var compra = document.querySelector('iframe .compra');
 
-      console.log(compra);
+    //   console.log(compra);
 
-      this.setState({ lastUpdate: (new Date()).toLocaleString('es-AR') });
-    },
-    5000);
+    //   this.setState({ lastUpdate: (new Date()).toLocaleString('es-AR') });
+    // },
+    // 5000);
   }
 
   componentWillUnmount() {
@@ -31,10 +36,6 @@ export default class ExchangeUpdater extends React.Component {
   }
 
   render () {
-    var iframeStyles = {
-      // display: 'none'
-    }
-
     return (
       <Card id={this.props.id}>
         <CardContent>
