@@ -8,7 +8,7 @@ export default class MoneyInput extends React.Component {
     super();
 
     this.state = {
-      value: 0
+      value: null
     }
   }
 

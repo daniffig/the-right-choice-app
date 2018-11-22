@@ -9,9 +9,7 @@ export default class Calculator extends React.Component {
     super();
 
     this.state = {
-      buyRate: null,
-      sellRate: null,
-      initialCapital: null
+      initialCapital: 0
     }
   }
 
@@ -20,7 +18,9 @@ export default class Calculator extends React.Component {
   }
 
   changeInitialCapital(initialCapital) {
-    this.setState({ initialCapital });
+    this.setState({
+      initialCapital: initialCapital
+    });
   }
 
   render () {

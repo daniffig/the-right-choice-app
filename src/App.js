@@ -10,6 +10,13 @@ import ExchangeRate from './components/ExchangeRate';
 import { Grid, Paper } from '@material-ui/core';
 
 class App extends Component {
+  constructor () {
+    super();
+
+    this.state = {
+      
+    }
+  }
 
   render() {
     return (
@@ -21,7 +28,7 @@ class App extends Component {
           <Grid item xs={6}>
             <ExchangeRate
               id="ExchangeRate-USD-buying-rate"
-              className='buy'
+              className="buy"
               label="Compra USD">
             </ExchangeRate>
           </Grid>

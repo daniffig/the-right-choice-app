@@ -33,12 +33,12 @@
 }
 
 #ExchangeRate-USD-buying-rate {
-  background-color: green;
+  background-color: rgb(221, 255, 72);
   grid-area: usdbuyingrate;
 }
 
 #ExchangeRate-USD-selling-rate {
-  background-color: green;
+  background-color: rgb(221, 255, 72);
   grid-area: usdsellingrate;
 }
 
